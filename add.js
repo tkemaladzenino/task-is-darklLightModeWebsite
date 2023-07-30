@@ -39,7 +39,6 @@ function createHeader() {
     registerButton.textContent = "Register";
 
 
-
     header.appendChild(leftPart);
     rightPart.appendChild(languageDropdown);
     rightPart.appendChild(signInButton);
@@ -86,7 +85,6 @@ function createMainPart() {
     textDiv3.textContent = " Register here!";
 
 
-
     // image div
     const imageDiv = document.createElement("div");
     imageDiv.classList.add("image-div");
@@ -96,9 +94,87 @@ function createMainPart() {
     imageDiv.appendChild(manImage);
 
 
+    //    registration div and form
 
     const registrationDiv = document.createElement("div");
     registrationDiv.classList.add("registration-div");
+
+    const registrationForm = document.createElement("form");
+    registrationForm.classList.add("registration-form");
+
+    // Email input
+    const emailInput = document.createElement("input");
+    emailInput.type = "email";
+    emailInput.placeholder = "Enter Email";
+
+    registrationForm.appendChild(emailInput);
+
+    // Small image for email input
+    const emailImage = document.createElement("img");
+    emailImage.src = "images/img1.png";
+    emailImage.classList.add("small-image");
+    emailInput.appendChild(emailImage);
+
+
+    // Password input
+    const passwordInput = document.createElement("input");
+    passwordInput.type = "password";
+    passwordInput.placeholder = "********";
+
+    const passwordIcon = document.createElement("i");
+
+    passwordInput.classList.add("input-with-icon");
+    passwordInput.appendChild(passwordIcon);
+    registrationForm.appendChild(passwordInput);
+
+
+    const recoverPasswordText = document.createElement("span");
+    recoverPasswordText.textContent = "Recover Password?";
+    registrationForm.appendChild(recoverPasswordText);
+
+    // Sign In button
+    const signInButton = document.createElement("button");
+    signInButton.textContent = "Sign In";
+    registrationForm.appendChild(signInButton);
+
+
+    // Horizontal lines with text in the middle
+    const horizontalLine1 = document.createElement("hr");
+    const orText = document.createElement("span");
+    orText.textContent = "Or continue with";
+    const horizontalLine2 = document.createElement("hr");
+
+
+
+    const orContainer = document.createElement("div");
+    orContainer.classList.add("or-container");
+    orContainer.appendChild(horizontalLine1);
+    orContainer.appendChild(orText);
+    orContainer.appendChild(horizontalLine2);
+    registrationForm.appendChild(orContainer);
+
+
+
+
+    // Three  icons
+    const crossedIcons = document.createElement("div");
+    crossedIcons.classList.add("crossed-icons");
+
+
+    const icon1 = document.createElement("img");
+    icon1.src = "images/google.png";
+    crossedIcons.appendChild(icon1);
+
+    const icon2 = document.createElement("img");
+    icon2.src = "images/Apple.png";
+    crossedIcons.appendChild(icon2);
+
+    const icon3 = document.createElement("img");
+    icon3.src = "images/Facebook.png";
+    crossedIcons.appendChild(icon3);
+
+    registrationForm.appendChild(crossedIcons);
+
 
 
 
@@ -109,11 +185,10 @@ function createMainPart() {
 
 
 
-
-
-
     mainPart.appendChild(imageDiv);
     mainPart.appendChild(registrationDiv);
+
+    registrationDiv.appendChild(registrationForm);
 
     return mainPart;
 }

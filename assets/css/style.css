@@ -90,7 +90,6 @@ select {
 .main-part {
     margin-top: 200px;
     height: 800px;
-    background-color: rgb(237, 238, 245);
     display: flex;
     flex-direction: row;
 }
@@ -102,10 +101,8 @@ select {
     line-height: 77px;
     letter-spacing: 0em;
     text-align: left;
-    width: 420px;
+    width: 450px;
 }
-
-
 
 .div-2 {
     font-family: Gilroy;
@@ -125,4 +122,74 @@ select {
 img {
     width: 545px;
     height: 449px;
+}
+
+
+.registration-form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-left: 90px;
+}
+
+.registration-form :nth-child(1),
+.registration-form :nth-child(2) {
+    width: 400px;
+    height: 60px;
+    background-color: #EAF0F7;
+    border-radius: 10px;
+    padding-left: 16px;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 77px;
+    letter-spacing: 0.09em;
+    text-align: left;
+    position: relative;
+    outline: none;
+    border: none;
+}
+
+.small-image {
+    width: 19px;
+    height: 19px;
+}
+
+
+.registration-form button {
+    background: #4461F2;
+    height: 60px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.or-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+hr {
+    width: 140px !important;
+    height: 3px !important;
+}
+
+span {
+    background-color: transparent !important;
+    margin-top: 5px;
+
+}
+
+.crossed-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.crossed-icons img {
+    width: 117px !important;
+    height: 60px;
 }
