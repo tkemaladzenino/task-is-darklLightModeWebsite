@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(..//..//fonts/Gilroy-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #F2F2F2;
+}
+
+.main-part {
+    height: 800px;
+    background-color: rgb(174, 176, 194);
+}
