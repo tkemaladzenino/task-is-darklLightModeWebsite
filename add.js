@@ -55,6 +55,8 @@ function createMainPart() {
     const mainPart = document.createElement("div");
     mainPart.classList.add("main-part");
 
+    // text-div
+
     const textDiv = document.createElement("div");
     textDiv.classList.add("text-div");
     textDiv.textContent = "Sign In toRecharge Direct";
@@ -65,23 +67,21 @@ function createMainPart() {
     textDiv1.textContent = "if you don’t an account you can ";
 
     const textDiv1P = document.createElement("div");
-    textDiv1P.classList.add("text-div");
+    textDiv1P.classList.add("text-div1");
     textDiv1P.textContent = " Register here!";
 
 
 
 
-    // Create image div
+
+    // image div
     const imageDiv = document.createElement("div");
     imageDiv.classList.add("image-div");
 
 
 
-
     const registrationDiv = document.createElement("div");
     registrationDiv.classList.add("registration-div");
-
-
 
 
 
