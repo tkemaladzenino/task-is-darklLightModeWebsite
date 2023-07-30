@@ -11,7 +11,33 @@ body {
     background: #F2F2F2;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    height: 43px;
+    margin-top: 98px;
+    background-color: chartreuse;
+}
+
+.left-part {
+    display: flex;
+    gap: 16px;
+}
+
+.left-part a {
+    text-decoration: none;
+    font-family: Gilroy;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #000000;
+}
+
+
+
 .main-part {
     height: 800px;
-    background-color: rgb(174, 176, 194);
+    background-color: rgb(237, 238, 245);
 }

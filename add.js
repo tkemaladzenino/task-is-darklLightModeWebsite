@@ -8,6 +8,7 @@ function createHeader() {
     const header = document.createElement("header");
     //left part 
     const leftPart = document.createElement("div");
+
     leftPart.classList.add("left-part");
 
     const links = ["Home", "About", "Blog", "Pages", "Contact"];
