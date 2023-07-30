@@ -25,7 +25,7 @@ header {
     flex-direction: row;
 
     justify-content: space-between;
-    width: 1280px;
+    width: 1520px;
 
 }
 
@@ -91,6 +91,8 @@ select {
     margin-top: 200px;
     height: 800px;
     background-color: rgb(237, 238, 245);
+    display: flex;
+    flex-direction: row;
 }
 
 .text-div {
@@ -103,15 +105,24 @@ select {
     width: 420px;
 }
 
-.text-div:nth-child(2) {
+
+
+.div-2 {
     font-family: Gilroy;
     font-size: 23px;
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
+    width: 230px;
+    margin-top: 60px;
 }
 
-.text-div1 {
+.div-3 {
     color: #4461F2;
+}
+
+img {
+    width: 545px;
+    height: 449px;
 }

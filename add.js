@@ -38,11 +38,15 @@ function createHeader() {
     const registerButton = document.createElement("button");
     registerButton.textContent = "Register";
 
+
+
     header.appendChild(leftPart);
     rightPart.appendChild(languageDropdown);
     rightPart.appendChild(signInButton);
     rightPart.appendChild(registerButton);
     header.appendChild(rightPart);
+
+
 
     return header;
 }
@@ -55,28 +59,41 @@ function createMainPart() {
     const mainPart = document.createElement("div");
     mainPart.classList.add("main-part");
 
+    const textdiviv1 = document.createElement("div");
+    mainPart.classList.add("main-part");
+
+
     // text-div
+
+    const textDivMain = document.createElement("div");
+    textDivMain.classList.add("main-part");
 
     const textDiv = document.createElement("div");
     textDiv.classList.add("text-div");
-    textDiv.textContent = "Sign In toRecharge Direct";
+
 
 
     const textDiv1 = document.createElement("div");
-    textDiv1.classList.add("text-div");
-    textDiv1.textContent = "if you don’t an account you can ";
+    textDiv1.classList.add("div-1");
+    textDiv1.textContent = "Sign In to  Recharge Direct";
 
-    const textDiv1P = document.createElement("div");
-    textDiv1P.classList.add("text-div1");
-    textDiv1P.textContent = " Register here!";
+    const textDiv2 = document.createElement("div");
+    textDiv2.classList.add("div-2");
+    textDiv2.textContent = "if you don’t an account  you can ";
 
-
+    const textDiv3 = document.createElement("div");
+    textDiv3.classList.add("div-3");
+    textDiv3.textContent = " Register here!";
 
 
 
     // image div
     const imageDiv = document.createElement("div");
     imageDiv.classList.add("image-div");
+
+    const manImage = document.createElement("img");
+    manImage.src = "images/man.png";
+    imageDiv.appendChild(manImage);
 
 
 
@@ -86,8 +103,10 @@ function createMainPart() {
 
 
     mainPart.appendChild(textDiv);
-    mainPart.appendChild(textDiv1);
-    textDiv1.appendChild(textDiv1P);
+    textDiv.appendChild(textDiv1);
+    textDiv.appendChild(textDiv2);
+    textDiv2.appendChild(textDiv3);
+
 
 
 
