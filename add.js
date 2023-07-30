@@ -1,8 +1,5 @@
 
 
-
-
-
 function createHeader() {
 
     const header = document.createElement("header");
@@ -33,7 +30,6 @@ function createHeader() {
         languageDropdown.appendChild(option);
     });
 
-
     languageDropdown.value = "english";
 
     const signInButton = document.createElement("button");
@@ -51,18 +47,93 @@ function createHeader() {
     return header;
 }
 
+// end header
+//main-part
+
+function createMainPart() {
+
+    const mainPart = document.createElement("div");
+    mainPart.classList.add("main-part");
+
+    const textDiv = document.createElement("div");
+    textDiv.classList.add("text-div");
+    textDiv.textContent = "Sign In toRecharge Direct";
+
+
+    const textDiv1 = document.createElement("div");
+    textDiv1.classList.add("text-div");
+    textDiv1.textContent = "if you don’t an account you can ";
+
+    const textDiv1P = document.createElement("div");
+    textDiv1P.classList.add("text-div");
+    textDiv1P.textContent = " Register here!";
+
+
+
+
+    // Create image div
+    const imageDiv = document.createElement("div");
+    imageDiv.classList.add("image-div");
+
+
+
+
+    const registrationDiv = document.createElement("div");
+    registrationDiv.classList.add("registration-div");
+
+
+
+
+
+    mainPart.appendChild(textDiv);
+    mainPart.appendChild(textDiv1);
+    textDiv1.appendChild(textDiv1P);
+
+
+
+
+
+    mainPart.appendChild(imageDiv);
+    mainPart.appendChild(registrationDiv);
+
+    return mainPart;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
-
     const header = createHeader();
-    body.appendChild(header);
+    const mainPart = createMainPart();
 
-    const mainPart = document.createElement("main");
-    mainPart.classList.add("main-part");
 
-    body.appendChild(mainPart);
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.appendChild(header);
+    card.appendChild(mainPart);
+    body.appendChild(card);
 });
+
+
+
 
 
 
