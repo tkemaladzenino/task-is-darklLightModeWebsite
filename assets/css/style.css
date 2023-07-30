@@ -130,7 +130,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin-left: 90px;
+    margin-left: 130px;
 }
 
 .registration-form :nth-child(1),
@@ -149,7 +149,11 @@ img {
     position: relative;
     outline: none;
     border: none;
+    margin-bottom: 10px;
+
 }
+
+
 
 .small-image {
     width: 19px;
@@ -163,6 +167,12 @@ img {
     border-radius: 10px;
     outline: none;
     border: none;
+    margin-top: 40px;
+}
+
+.registration-form span {
+    display: flex !important;
+    justify-content: flex-end !important;
 }
 
 .or-container {
@@ -180,9 +190,10 @@ hr {
 
 span {
     background-color: transparent !important;
-    margin-top: 5px;
-
+    margin-top: 10px;
 }
+
+
 
 .crossed-icons {
     display: flex;

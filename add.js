@@ -46,7 +46,6 @@ function createHeader() {
     header.appendChild(rightPart);
 
 
-
     return header;
 }
 
@@ -95,6 +94,7 @@ function createMainPart() {
 
 
     //    registration div and form
+
 
     const registrationDiv = document.createElement("div");
     registrationDiv.classList.add("registration-div");
@@ -145,14 +145,12 @@ function createMainPart() {
     const horizontalLine2 = document.createElement("hr");
 
 
-
     const orContainer = document.createElement("div");
     orContainer.classList.add("or-container");
     orContainer.appendChild(horizontalLine1);
     orContainer.appendChild(orText);
     orContainer.appendChild(horizontalLine2);
     registrationForm.appendChild(orContainer);
-
 
 
 
@@ -165,9 +163,13 @@ function createMainPart() {
     icon1.src = "images/google.png";
     crossedIcons.appendChild(icon1);
 
+    const icon2iv = document.createComment("div");
+
     const icon2 = document.createElement("img");
     icon2.src = "images/Apple.png";
+
     crossedIcons.appendChild(icon2);
+
 
     const icon3 = document.createElement("img");
     icon3.src = "images/Facebook.png";
@@ -177,12 +179,10 @@ function createMainPart() {
 
 
 
-
     mainPart.appendChild(textDiv);
     textDiv.appendChild(textDiv1);
     textDiv.appendChild(textDiv2);
     textDiv2.appendChild(textDiv3);
-
 
 
     mainPart.appendChild(imageDiv);
@@ -199,19 +199,7 @@ function createMainPart() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
 
 document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
