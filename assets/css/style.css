@@ -75,6 +75,10 @@ select {
     box-shadow: 0px 4px 4px 0px #0000000D;
     border: none;
     outline: none;
+    border-radius: 20px;
+    width: 112px;
+    height: 42px;
+    padding-left: 20px;
     color: #4461F2;
     font-family: Gilroy;
     font-size: 17px;
@@ -153,9 +157,12 @@ img {
 
 }
 
-
-
 .small-image {
+    width: 24px;
+    height: 24px;
+}
+
+.small-image:nth-child(2) {
     width: 19px;
     height: 19px;
 }
@@ -168,6 +175,7 @@ img {
     outline: none;
     border: none;
     margin-top: 40px;
+    color: white;
 }
 
 .registration-form span {
@@ -197,10 +205,51 @@ span {
 
 .crossed-icons {
     display: flex;
-    gap: 10px;
+    gap: 26px;
 }
 
 .crossed-icons img {
     width: 117px !important;
     height: 60px;
+}
+
+
+
+#btn-1 {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.25);
+    border-radius: 24.5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    color: #363636;
+    border: none;
+    top: 60px;
+    z-index: 2;
+    left: 500px;
+}
+
+
+#btn-2 {
+    position: absolute;
+    width: 110px;
+    height: 30px;
+    background-color: #C4C4C4;
+    border-radius: 24.5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 16px;
+    color: #747474;
+    left: 530px;
+    border: none;
+    padding-left: 40px;
+    top: 60px;
+    z-index: 1;
 }

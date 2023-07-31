@@ -16,10 +16,17 @@ function createHeader() {
         leftPart.appendChild(link);
     });
 
+    //day and night switcher
+
+
+
 
     // right-part
     const rightPart = document.createElement("div");
     rightPart.classList.add("right-part");
+
+    const darkLight = document.createComment("div");
+
 
     const languageDropdown = document.createElement("select");
     const languages = ["English", "Georgian", "German"];
@@ -40,6 +47,9 @@ function createHeader() {
 
 
     header.appendChild(leftPart);
+
+    rightPart.appendChild(darkLight);
+
     rightPart.appendChild(languageDropdown);
     rightPart.appendChild(signInButton);
     rightPart.appendChild(registerButton);
@@ -166,7 +176,7 @@ function createMainPart() {
     const icon2iv = document.createComment("div");
 
     const icon2 = document.createElement("img");
-    icon2.src = "images/Apple.png";
+    icon2.src = "images/Apple2.png";
 
     crossedIcons.appendChild(icon2);
 
@@ -197,8 +207,6 @@ function createMainPart() {
 
 
 
-
-
 //
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -212,8 +220,38 @@ document.addEventListener("DOMContentLoaded", function () {
     card.appendChild(header);
     card.appendChild(mainPart);
     body.appendChild(card);
+
+
+
+
 });
 
+
+function day() {
+
+    document.body.style.backgroundColor = "#f1fbfc";
+    document.querySelector("a").style.color = "black";
+
+
+    document.getElementsByClassName("div-1").style.color = "black";
+
+
+
+
+
+}
+function night() {
+    document.body.style.backgroundColor = "black";
+    document.querySelector("a").style.color = "white";
+
+
+
+
+
+    document.getElementsByClassName("div-1").style.color = "white";
+
+    document.getElementById("wel").innerHTML = "Create new account";
+}
 
 
 
