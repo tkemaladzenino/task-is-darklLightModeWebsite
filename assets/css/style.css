@@ -120,7 +120,7 @@ select {
 }
 
 .div-3 {
-    color: #4461F2;
+    color: #4461F2 !important;
 }
 
 img {
@@ -185,20 +185,25 @@ img {
 
 .or-container {
     display: flex;
+
     flex-direction: row;
     align-items: flex-end;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     gap: 5px;
 }
 
 hr {
     width: 140px !important;
     height: 3px !important;
+    color: black !important;
+
 }
 
 span {
     background-color: transparent !important;
     margin-top: 10px;
+    padding-right: 30px;
+    padding-top: 20px;
 }
 
 
@@ -215,7 +220,7 @@ span {
 
 
 
-#btn-1 {
+#light-button {
     position: absolute;
     width: 80px;
     height: 30px;
@@ -235,7 +240,7 @@ span {
 }
 
 
-#btn-2 {
+#dark-button {
     position: absolute;
     width: 110px;
     height: 30px;

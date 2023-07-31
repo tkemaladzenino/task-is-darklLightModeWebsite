@@ -16,17 +16,10 @@ function createHeader() {
         leftPart.appendChild(link);
     });
 
-    //day and night switcher
-
-
-
 
     // right-part
     const rightPart = document.createElement("div");
     rightPart.classList.add("right-part");
-
-    const darkLight = document.createComment("div");
-
 
     const languageDropdown = document.createElement("select");
     const languages = ["English", "Georgian", "German"];
@@ -47,9 +40,6 @@ function createHeader() {
 
 
     header.appendChild(leftPart);
-
-    rightPart.appendChild(darkLight);
-
     rightPart.appendChild(languageDropdown);
     rightPart.appendChild(signInButton);
     rightPart.appendChild(registerButton);
@@ -133,6 +123,7 @@ function createMainPart() {
 
     const passwordIcon = document.createElement("i");
 
+
     passwordInput.classList.add("input-with-icon");
     passwordInput.appendChild(passwordIcon);
     registrationForm.appendChild(passwordInput);
@@ -176,10 +167,8 @@ function createMainPart() {
     const icon2iv = document.createComment("div");
 
     const icon2 = document.createElement("img");
-    icon2.src = "images/Apple2.png";
-
+    icon2.src = "images/Apple6.png";
     crossedIcons.appendChild(icon2);
-
 
     const icon3 = document.createElement("img");
     icon3.src = "images/Facebook.png";
@@ -187,13 +176,10 @@ function createMainPart() {
 
     registrationForm.appendChild(crossedIcons);
 
-
-
     mainPart.appendChild(textDiv);
     textDiv.appendChild(textDiv1);
     textDiv.appendChild(textDiv2);
     textDiv2.appendChild(textDiv3);
-
 
     mainPart.appendChild(imageDiv);
     mainPart.appendChild(registrationDiv);
@@ -204,54 +190,57 @@ function createMainPart() {
 }
 
 
-
-
-
-//
-
 document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
+    //light mode
+    const lightModeButton = document.getElementById("light-button");
+    lightModeButton.addEventListener("click", function () {
+
+        const leftPartLinks = document.querySelectorAll(".left-part a");
+        leftPartLinks.forEach(link => {
+            link.style.color = "#000";
+        });
+
+        const mainPartDivs = document.querySelectorAll(".main-part div");
+        mainPartDivs.forEach(div => {
+            div.style.color = "#000";
+        });
+
+        body.style.backgroundColor = "#f1fbfc";
+        body.classList.remove("dark-mode");
+    });
+
+    //black mode
+    const darkModeButton = document.getElementById("dark-button");
+    darkModeButton.addEventListener("click", function () {
+
+        const leftPartLinks = document.querySelectorAll(".left-part a");
+        leftPartLinks.forEach(link => {
+            link.style.color = "#fff";
+        });
+
+        const mainPartDivs = document.querySelectorAll(".main-part div");
+        mainPartDivs.forEach(div => {
+            div.style.color = "#fff";
+
+        });
+        body.style.backgroundColor = "black";
+
+        body.classList.add("dark-mode");
+    });
+
+    //
+
     const header = createHeader();
     const mainPart = createMainPart();
-
 
     const card = document.createElement("div");
     card.classList.add("card");
     card.appendChild(header);
     card.appendChild(mainPart);
     body.appendChild(card);
-
-
-
-
 });
 
-
-function day() {
-
-    document.body.style.backgroundColor = "#f1fbfc";
-    document.querySelector("a").style.color = "black";
-
-
-    document.getElementsByClassName("div-1").style.color = "black";
-
-
-
-
-
-}
-function night() {
-    document.body.style.backgroundColor = "black";
-    document.querySelector("a").style.color = "white";
-
-
-
-
-
-    document.getElementsByClassName("div-1").style.color = "white";
-
-    document.getElementById("wel").innerHTML = "Create new account";
-}
 
 
 
