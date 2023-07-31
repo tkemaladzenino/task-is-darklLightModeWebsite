@@ -95,7 +95,6 @@ function createMainPart() {
 
     //    registration div and form
 
-
     const registrationDiv = document.createElement("div");
     registrationDiv.classList.add("registration-div");
 
@@ -121,10 +120,8 @@ function createMainPart() {
     passwordInput.type = "password";
     passwordInput.placeholder = "********";
 
-    const passwordIcon = document.createElement("i");
-
-
-    passwordInput.classList.add("input-with-icon");
+    const passwordIcon = document.createElement("img");
+    passwordInput.classList.add("images/img2.png");
     passwordInput.appendChild(passwordIcon);
     registrationForm.appendChild(passwordInput);
 
@@ -138,13 +135,11 @@ function createMainPart() {
     signInButton.textContent = "Sign In";
     registrationForm.appendChild(signInButton);
 
-
     // Horizontal lines with text in the middle
     const horizontalLine1 = document.createElement("hr");
     const orText = document.createElement("span");
     orText.textContent = "Or continue with";
     const horizontalLine2 = document.createElement("hr");
-
 
     const orContainer = document.createElement("div");
     orContainer.classList.add("or-container");
@@ -161,7 +156,7 @@ function createMainPart() {
 
 
     const icon1 = document.createElement("img");
-    icon1.src = "images/google.png";
+    icon1.src = "images/Google1.png";
     crossedIcons.appendChild(icon1);
 
     const icon2iv = document.createComment("div");
@@ -205,6 +200,8 @@ document.addEventListener("DOMContentLoaded", function () {
         mainPartDivs.forEach(div => {
             div.style.color = "#000";
         });
+        const rightPartFirstChild = document.querySelector(".right-part > :first-child");
+        rightPartFirstChild.style.color = "black ";
 
         body.style.backgroundColor = "#f1fbfc";
         body.classList.remove("dark-mode");
@@ -222,10 +219,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const mainPartDivs = document.querySelectorAll(".main-part div");
         mainPartDivs.forEach(div => {
             div.style.color = "#fff";
-
         });
-        body.style.backgroundColor = "black";
 
+        const rightPartFirstChild = document.querySelector(".right-part > :first-child");
+        rightPartFirstChild.style.color = "white";
+
+        body.style.backgroundColor = "black";
         body.classList.add("dark-mode");
     });
 
@@ -240,6 +239,11 @@ document.addEventListener("DOMContentLoaded", function () {
     card.appendChild(mainPart);
     body.appendChild(card);
 });
+
+function myFunction() {
+    var x = document.getElementsByClassName("input").value;
+    document.getElementById("demo").innerHTML = x;
+}
 
 
 
