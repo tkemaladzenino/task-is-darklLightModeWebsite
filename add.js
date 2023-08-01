@@ -105,25 +105,25 @@ function createMainPart() {
     const emailInput = document.createElement("input");
     emailInput.type = "email";
     emailInput.placeholder = "Enter Email";
-
     registrationForm.appendChild(emailInput);
 
     // Small image for email input
     const emailImage = document.createElement("img");
     emailImage.src = "images/img1.png";
     emailImage.classList.add("small-image");
-    emailInput.appendChild(emailImage);
+    registrationForm.appendChild(emailImage);
 
 
     // Password input
     const passwordInput = document.createElement("input");
     passwordInput.type = "password";
-    passwordInput.placeholder = "********";
-
-    const passwordIcon = document.createElement("img");
-    passwordInput.classList.add("images/img2.png");
-    passwordInput.appendChild(passwordIcon);
+    passwordInput.placeholder = "••••••••";
     registrationForm.appendChild(passwordInput);
+
+    const passwordImage = document.createElement("img");
+    passwordImage.src = "images/img2.png";
+    passwordImage.classList.add("small-image");
+    registrationForm.appendChild(passwordImage);
 
 
     const recoverPasswordText = document.createElement("span");
@@ -162,7 +162,7 @@ function createMainPart() {
     const icon2iv = document.createComment("div");
 
     const icon2 = document.createElement("img");
-    icon2.src = "images/Apple6.png";
+    icon2.src = "images/Apple3.png";
     crossedIcons.appendChild(icon2);
 
     const icon3 = document.createElement("img");
@@ -240,10 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
     body.appendChild(card);
 });
 
-function myFunction() {
-    var x = document.getElementsByClassName("input").value;
-    document.getElementById("demo").innerHTML = x;
-}
+
 
 
 
