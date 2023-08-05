@@ -26,7 +26,6 @@ header {
 
     justify-content: space-between;
     width: 1520px;
-
 }
 
 .left-part {
@@ -156,8 +155,6 @@ img {
     margin-bottom: 10px;
 }
 
-
-
 ::placeholder {
     padding-left: 16px;
     font-family: Inter;
@@ -174,16 +171,98 @@ img {
     height: 24px !important;
     position: absolute !important;
     z-index: 3;
-    top: 368px;
-    right: 533px;
+    cursor: pointer;
+
 }
 
 .small-image:nth-child(4) {
     width: 24px !important;
     height: 24px !important;
     position: absolute;
-    top: 448px;
-    right: 540px;
+    cursor: pointer;
+
+}
+
+@media only screen and (max-width: 1920px) {
+
+    .small-image:nth-child(2) {
+        top: 368px;
+        right: 220px;
+    }
+
+    .small-image:nth-child(4) {
+        top: 448px;
+        right: 220px;
+    }
+
+}
+
+@media only screen and (max-width: 1600px) {
+
+    .small-image:nth-child(2) {
+        top: 368px;
+        right: 70px;
+    }
+
+    .small-image:nth-child(4) {
+        top: 448px;
+        right: 70px;
+    }
+
+}
+
+@media only screen and (max-width: 1440px) {
+    .image-div img {
+        width: 450px;
+        height: 350px;
+    }
+
+    .registration-form {
+        margin-left: 40px;
+    }
+
+    header {
+        width: 1310px;
+    }
+
+    .div-1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    img {
+        display: none;
+        width: 420px;
+        height: 320px;
+    }
+
+    .registration-form {
+        margin-left: 30px;
+    }
+
+    header {
+        width: 880px;
+    }
+
+    .div-1 {
+        font-size: 50px;
+    }
+
+    .crossed-icons img {
+        display: block;
+    }
+
+    .small-image:nth-child(2) {
+        top: 368px;
+        right: 50px;
+    }
+
+    .small-image:nth-child(4) {
+        top: 448px;
+        right: 50px;
+    }
+
 }
 
 
@@ -245,6 +324,11 @@ span {
 .crossed-icons img {
     width: 120px !important;
     height: 60px;
+    border-radius: 10px;
+}
+
+.crossed-icons:nth-child(2) {
+    border-radius: 8px;
 }
 
 

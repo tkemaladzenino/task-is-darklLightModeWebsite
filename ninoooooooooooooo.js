@@ -103,7 +103,6 @@ function createMainPart() {
 
     // Email input
     const emailInput = document.createElement("input");
-    emailInput.id = "emailInput1";
     emailInput.type = "text";
     emailInput.placeholder = "Enter Email";
     registrationForm.appendChild(emailInput);
@@ -111,7 +110,6 @@ function createMainPart() {
     // Small image for email input
     const emailImage = document.createElement("img");
     emailImage.src = "images/img1.png";
-    emailImage.id = "img1Id";
     emailImage.classList.add("small-image");
     registrationForm.appendChild(emailImage);
 
@@ -119,13 +117,11 @@ function createMainPart() {
     // Password input
     const passwordInput = document.createElement("input");
     passwordInput.type = "password";
-    passwordInput.id = "passwordInput1";
     passwordInput.placeholder = "••••••••";
     registrationForm.appendChild(passwordInput);
 
     const passwordImage = document.createElement("img");
     passwordImage.src = "images/img2.png";
-    passwordImage.id = "img2Id";
     passwordImage.classList.add("small-image");
     registrationForm.appendChild(passwordImage);
 
@@ -151,8 +147,6 @@ function createMainPart() {
     orContainer.appendChild(orText);
     orContainer.appendChild(horizontalLine2);
     registrationForm.appendChild(orContainer);
-
-
 
     // Three  icons
     const crossedIcons = document.createElement("div");
@@ -192,25 +186,39 @@ function createMainPart() {
 function validation(event) {
 
 
-    const emailInput = document.getElementById("emailInput1");
+    const emailInput = document.querySelector("emailInput");
 
-    const passwordInput = document.getElementById("passwordInput1");
+
+    const passwordInput = document.querySelector("passwordInput");
+    const img1 = document.querySelector("img[src='images/img1.png']");
+
+
+    // Small image for email input
+
 
     if (emailInput.value === "") {
-
+        img1.style.display = "none";
         window.alert("Please enter your email.");
         event.preventDefault(); // Prevent form submission and page refresh
         return false;
-    }
+    } else {
+        img1.style.display = "inline";
+
+    };
+
 
     if (passwordInput.value === "") {
-
-        window.alert("Please enter your password.");
+        passwordImage.style.display = "block";
+        wondow.alert("Please enter your password.");
         event.preventDefault(); // Prevent form submission and page refresh
         return false;
+    } else {
+        passwordImageImage.style.display = "none";
     }
+};
 
-}
+
+
 
 
 // Handle IMG1 click (clear email input)
@@ -250,6 +258,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+
+    const img1 = document.querySelector("img[src='images/img1.png']");
+    img1.addEventListener("click", function () {
+
+        const emailInput = document.getElementById("emailInput");
+
+        if (emailInput.value === "") {
+            img1.style.display = "none"; // Hide img1 when IMG1 is clicked and email input is empty
+        } else {
+            img1.style.display = "inline"; // Show img1 when IMG1 is clicked and email input has data
+        }
+    });
+
+
+    document.getElementById('img2Id').addEventListener('click', () => {
+        let passwordInput = document.getElementById('passwordInput1')
+        let hiddenPassword = passwordInput.type == 'password';
+        let type = 'password';
+
+        if (hiddenPassword) {
+            type = 'text';
+        }
+
+        passwordInput.type = type;
+    });
+
+
+    //1111111
+
+
+
+
     //black mode
     const darkModeButton = document.getElementById("dark-button");
     darkModeButton.addEventListener("click", function () {
@@ -269,32 +309,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         body.style.backgroundColor = "black";
         body.classList.add("dark-mode");
-    });
-
-
-
-    //
-
-    // click email 
-
-
-    //click password
-
-    const passwordImage = document.createElement("img");
-    passwordImage.src = "images/img2.png";
-    passwordImage.id = "img2Id";
-
-    document.getElementById('img2Id');
-    passwordImage.addEventListener('click', () => {
-        const passwordInput = document.getElementById('passwordInput1')
-        const hiddenPassword = passwordInput.type == 'password';
-        const type = 'password';
-
-        if (hiddenPassword) {
-            type = 'text';
-        }
-
-        passwordInput.type = type;
     });
 
     //
