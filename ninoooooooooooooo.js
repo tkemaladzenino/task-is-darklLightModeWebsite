@@ -279,6 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (hiddenPassword) {
             type = 'text';
+            document.getElementById("spanId").innerHTML = "recover password?";
         }
 
         passwordInput.type = type;

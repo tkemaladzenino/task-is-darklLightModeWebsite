@@ -131,7 +131,8 @@ function createMainPart() {
 
 
     const recoverPasswordText = document.createElement("span");
-    recoverPasswordText.textContent = "Recover Password?";
+    recoverPasswordText.id = "spanId";
+
     registrationForm.appendChild(recoverPasswordText);
 
     // Sign In button
@@ -188,10 +189,12 @@ function createMainPart() {
     return mainPart;
 }
 
+//validacion  page non refresh
 
 function validation(event) {
 
-
+    const recoverPasswordText = document.createElement("span");
+    recoverPasswordText.id = "spanId";
     const emailInput = document.getElementById("emailInput1");
 
     const passwordInput = document.getElementById("passwordInput1");
@@ -204,19 +207,13 @@ function validation(event) {
     }
 
     if (passwordInput.value === "") {
+        document.getElementById("spanId").innerHTML = "Recover Password?";
 
-        window.alert("Please enter your password.");
         event.preventDefault(); // Prevent form submission and page refresh
         return false;
     }
 
 }
-
-
-// Handle IMG1 click (clear email input)
-
-// Handle IMG2 click (toggle password visibility)
-
 
 
 
@@ -272,10 +269,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-
-    //
-
     // click email 
+
+
+
+
+    const emailImage = document.createElement("img");
+    emailImage.src = "images/img1.png";
+    emailImage.id = "img1Id";
+    document.getElementById('img1Id');
+
+    emailImage.addEventListener("click", function () {
+        const emailInput = document.getElementById("emailInput");
+        emailInput.value = ""; // Clear email input when img1 is clicked
+    });
 
 
     //click password
@@ -283,8 +290,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const passwordImage = document.createElement("img");
     passwordImage.src = "images/img2.png";
     passwordImage.id = "img2Id";
-
     document.getElementById('img2Id');
+
     passwordImage.addEventListener('click', () => {
         const passwordInput = document.getElementById('passwordInput1')
         const hiddenPassword = passwordInput.type == 'password';
@@ -292,8 +299,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (hiddenPassword) {
             type = 'text';
-        }
 
+        }
         passwordInput.type = type;
     });
 
@@ -301,14 +308,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const header = createHeader();
     const mainPart = createMainPart();
-
     const card = document.createElement("div");
     card.classList.add("card");
     card.appendChild(header);
     card.appendChild(mainPart);
     body.appendChild(card);
-
-
 
 });
 
