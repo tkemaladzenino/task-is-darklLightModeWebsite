@@ -271,9 +271,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // click email 
 
-
-
-
     const emailImage = document.createElement("img");
     emailImage.src = "images/img1.png";
     emailImage.id = "img1Id";
@@ -281,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     emailImage.addEventListener("click", function () {
         const emailInput = document.getElementById("emailInput");
-        emailInput.value = ""; // Clear email input when img1 is clicked
+        emailInput.value = "";
     });
 
 
@@ -299,7 +296,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (hiddenPassword) {
             type = 'text';
-
         }
         passwordInput.type = type;
     });
