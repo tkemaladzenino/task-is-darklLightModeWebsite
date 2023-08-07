@@ -202,12 +202,19 @@ function createMainPart() {
 
         iconLink.appendChild(icon);
         crossedIcons.appendChild(iconLink);
+
+        if (iconInfo.src === "images/Apple3.png") {
+            icon.classList.add("apple-icon"); // Add a class for styling Apple3.png
+
+        }
+
     });
 
-    registrationForm.appendChild(crossedIcons);
 
 
     registrationForm.appendChild(crossedIcons);
+
+
 
     mainPart.appendChild(textDiv);
     textDiv.appendChild(textDiv1);

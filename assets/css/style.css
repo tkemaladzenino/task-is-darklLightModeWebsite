@@ -42,6 +42,7 @@ header {
     letter-spacing: 0.06em;
     text-align: left;
     color: #000000;
+
 }
 
 .right-part {
@@ -53,6 +54,12 @@ select {
     background: transparent;
     border: none;
     outline: none;
+    font-family: Gilroy;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.06em;
+    color: #000000;
 }
 
 
@@ -172,12 +179,13 @@ img {
     margin-left: 130px;
 }
 
-.registration-form :nth-child(1),
-.registration-form :nth-child(3) {
+#emailInput1,
+#passwordInput1 {
     width: 400px;
     height: 60px;
     background-color: #EAF0F7;
     border-radius: 10px;
+    padding-left: 20px;
 
     font-family: Gilroy;
     font-size: 18px;
@@ -189,12 +197,13 @@ img {
     outline: none;
     border: none;
     margin-bottom: 10px;
+
 }
 
 
 
 ::placeholder {
-    padding-left: 16px;
+    padding-left: 6px;
     text-align: left;
     color: #667085;
     font-family: Gilroy;
@@ -225,8 +234,13 @@ img {
     height: 60px;
     border-radius: 10px;
     border: 1px solid #DDDFDD !important;
+
+}
+
+.apple-icon {
     box-shadow: 0 4px 8px 0 rgba(206, 195, 195, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
+
 
 #img2Id {
     cursor: pointer;
@@ -356,6 +370,10 @@ img {
     border: none;
     margin-top: 38px;
     color: white;
+    font-family: Gilroy;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
 }
 
 .registration-form span {
@@ -388,13 +406,12 @@ input img {
 
 hr {
     width: 120px !important;
-    height: 1px !important;
-    color: black !important;
-
+    height: 1px;
+    border: 1px solid #DFDFDF;
 }
 
 span {
-    background-color: transparent !important;
+    background-color: transparent;
     padding-right: 17px;
     padding-left: 12px;
     padding-top: 20px;
@@ -404,6 +421,10 @@ span {
 .crossed-icons {
     display: flex;
     gap: 20px;
+}
+
+.crossed-icons:nth-child(2) {
+    box-shadow: #d2f244;
 }
 
 #light-button {
