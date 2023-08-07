@@ -190,7 +190,7 @@ function createMainPart() {
     const iconLinks = [
         { src: "images/Google1.png", link: "https://www.google.com" },
         { src: "images/Apple3.png", link: "https://www.apple.com" },
-        { src: "images/Facebook.png", link: "https://www.facebook.com" }
+        { src: "images/Facebook.png", link: "#" }
     ];
 
     iconLinks.forEach(iconInfo => {
