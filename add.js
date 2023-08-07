@@ -32,8 +32,17 @@ function createHeader() {
 
     languageDropdown.value = "english";
 
+
+
     const signInButton = document.createElement("button");
+
+    signInButton.id = "signButton";
+
+
     signInButton.textContent = "Sign In";
+
+
+
 
     const registerButton = document.createElement("button");
     registerButton.textContent = "Register";
@@ -75,13 +84,30 @@ function createMainPart() {
     textDiv1.classList.add("div-1");
     textDiv1.textContent = "Sign In to  Recharge Direct";
 
+
     const textDiv2 = document.createElement("div");
     textDiv2.classList.add("div-2");
-    textDiv2.textContent = "if you don’t an account  you can ";
+    textDiv2.textContent = "if you don’t an account   ";
+
+    const textDiv21 = document.createElement("div");
+    textDiv21.classList.add("div-21");
+    textDiv21.textContent = "you can ";
+
 
     const textDiv3 = document.createElement("div");
     textDiv3.classList.add("div-3");
     textDiv3.textContent = " Register here!";
+
+    // Inside the createMainPart function, after creating the "textDiv3" element
+
+
+    // Inside the createMainPart function, after creating textDiv3
+    const registerLink = document.createElement("a");
+    registerLink.href = "https://www.example.com/register"; // Replace with your actual registration link
+    registerLink.textContent = " Register here!";
+
+    textDiv3.textContent = ""; // Clear the text content of textDiv3
+    textDiv3.appendChild(registerLink); // Append the anchor to textDiv3
 
 
     // image div
@@ -154,32 +180,40 @@ function createMainPart() {
     registrationForm.appendChild(orContainer);
 
 
-
     // Three  icons
     const crossedIcons = document.createElement("div");
     crossedIcons.classList.add("crossed-icons");
 
 
-    const icon1 = document.createElement("img");
-    icon1.src = "images/Google1.png";
-    crossedIcons.appendChild(icon1);
+    //icon-links
 
-    const icon2iv = document.createComment("div");
+    const iconLinks = [
+        { src: "images/Google1.png", link: "https://www.google.com" },
+        { src: "images/Apple3.png", link: "https://www.apple.com" },
+        { src: "images/Facebook.png", link: "https://www.facebook.com" }
+    ];
 
-    const icon2 = document.createElement("img");
-    icon2.src = "images/Apple3.png";
-    crossedIcons.appendChild(icon2);
+    iconLinks.forEach(iconInfo => {
+        const iconLink = document.createElement("a");
+        iconLink.href = iconInfo.link;
 
-    const icon3 = document.createElement("img");
-    icon3.src = "images/Facebook.png";
-    crossedIcons.appendChild(icon3);
+        const icon = document.createElement("img");
+        icon.src = iconInfo.src;
+
+        iconLink.appendChild(icon);
+        crossedIcons.appendChild(iconLink);
+    });
+
+    registrationForm.appendChild(crossedIcons);
+
 
     registrationForm.appendChild(crossedIcons);
 
     mainPart.appendChild(textDiv);
     textDiv.appendChild(textDiv1);
     textDiv.appendChild(textDiv2);
-    textDiv2.appendChild(textDiv3);
+    textDiv.appendChild(textDiv21);
+    textDiv21.appendChild(textDiv3);
 
     mainPart.appendChild(imageDiv);
     mainPart.appendChild(registrationDiv);
@@ -193,7 +227,7 @@ function createMainPart() {
 
 function validation(event) {
 
-    const recoverPasswordText = document.createElement("span");
+
     recoverPasswordText.id = "spanId";
     const emailInput = document.getElementById("emailInput1");
 
@@ -207,7 +241,6 @@ function validation(event) {
     }
 
     if (passwordInput.value === "") {
-        document.getElementById("spanId").innerHTML = "Recover Password?";
 
         event.preventDefault(); // Prevent form submission and page refresh
         return false;
@@ -215,10 +248,12 @@ function validation(event) {
 
 }
 
-
+//  
 
 document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
+    body.style.background = "url(images/Background1.png) no-repeat";
+
     //light mode
     const lightModeButton = document.getElementById("light-button");
     lightModeButton.addEventListener("click", function () {
@@ -235,9 +270,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const rightPartFirstChild = document.querySelector(".right-part > :first-child");
         rightPartFirstChild.style.color = "black ";
 
-        body.style.backgroundColor = "#f1fbfc";
+        body.style.background = "url(images/Background1.png) no-repeat";
+        document.body.style.backgroundImage = "url(images/Background1.png)";
         body.classList.remove("dark-mode");
-
 
         const registrationForm = document.querySelector(".registration-form");
         registrationForm.
@@ -271,34 +306,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // click email 
 
-    const emailImage = document.createElement("img");
-    emailImage.src = "images/img1.png";
-    emailImage.id = "img1Id";
-    document.getElementById('img1Id');
-
-    emailImage.addEventListener("click", function () {
-        const emailInput = document.getElementById("emailInput");
-        emailInput.value = "";
-    });
-
-
-    //click password
-
-    const passwordImage = document.createElement("img");
-    passwordImage.src = "images/img2.png";
-    passwordImage.id = "img2Id";
-    document.getElementById('img2Id');
-
-    passwordImage.addEventListener('click', () => {
-        const passwordInput = document.getElementById('passwordInput1')
-        const hiddenPassword = passwordInput.type == 'password';
-        const type = 'password';
-
-        if (hiddenPassword) {
-            type = 'text';
-        }
-        passwordInput.type = type;
-    });
 
     //
 
@@ -309,6 +316,25 @@ document.addEventListener("DOMContentLoaded", function () {
     card.appendChild(header);
     card.appendChild(mainPart);
     body.appendChild(card);
+
+
+
+    const emailImage = document.getElementById("img1Id");
+    emailImage.addEventListener("click", function () {
+        const emailInput = document.getElementById("emailInput1");
+        emailInput.value = "";
+    });
+
+    // Click password image
+
+    const passwordImage = document.getElementById("img2Id");
+    passwordImage.addEventListener('click', () => {
+        const passwordInput = document.getElementById('passwordInput1');
+        const hiddenPassword = passwordInput.type === 'password';
+        const type = hiddenPassword ? 'text' : 'password';
+        document.getElementById("spanId").innerHTML = "Recover Password?";
+        passwordInput.type = type;
+    });
 
 });
 

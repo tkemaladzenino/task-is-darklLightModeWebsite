@@ -8,7 +8,8 @@
 }
 
 body {
-    background: #f1fbfc;
+    background: url(..//..//images/Background1.png);
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
 }
@@ -70,6 +71,33 @@ select {
     text-align: left;
 }
 
+
+
+#signButton {
+    border: none;
+    position: relative;
+}
+
+#signButton::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 3px;
+    background-color: #4461F2;
+    cursor: pointer;
+}
+
+
+
+#signButton:hover::after {
+    width: 64px;
+    /* Length on hover */
+}
+
+
 .right-part :nth-child(3) {
     box-shadow: 0px 4px 4px 0px #0000000D;
     border: none;
@@ -108,6 +136,7 @@ select {
 }
 
 .div-2 {
+
     font-family: Gilroy;
     font-size: 23px;
     font-weight: 700;
@@ -118,8 +147,15 @@ select {
     margin-top: 60px;
 }
 
-.div-3 {
+.div-21 {
+    display: inline-flex;
+    gap: 6px;
+    font-size: 23px;
+}
+
+.div-3 a {
     color: #4461F2 !important;
+    text-decoration: none;
 }
 
 img {
@@ -155,15 +191,18 @@ img {
     margin-bottom: 10px;
 }
 
+
+
 ::placeholder {
     padding-left: 16px;
-    font-family: Inter;
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
     text-align: left;
     color: #667085;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 77px;
+    letter-spacing: 0.09em;
+    text-align: left;
 }
 
 .small-image:nth-child(2) {
@@ -184,6 +223,11 @@ img {
 
 #img2Id {
     cursor: pointer;
+}
+
+.crossed-icons img :nth-child(2) {
+    outline: blue;
+    border: 2px solid rgb(183, 23, 23);
 }
 
 @media only screen and (max-width: 1920px) {
@@ -269,21 +313,20 @@ img {
 }
 
 
-
-
 .registration-form button {
     background: #4461F2;
     height: 60px;
     border-radius: 10px;
     outline: none;
     border: none;
-    margin-top: 40px;
+    margin-top: 38px;
     color: white;
 }
 
 .registration-form span {
     display: flex !important;
     justify-content: flex-end !important;
+    color: #C7C7C7;
 }
 
 
@@ -298,27 +341,29 @@ input img {
 
 .or-container {
     display: flex;
-
     flex-direction: row;
     align-items: flex-end;
     margin-bottom: 40px;
     gap: 5px;
 }
 
+.or-container:nth-child() {
+    margin-top: 10px;
+}
+
 hr {
     width: 120px !important;
-    height: 2px !important;
+    height: 1px !important;
     color: black !important;
 
 }
 
 span {
     background-color: transparent !important;
-    margin-top: 10px;
-    padding-right: 30px;
+    padding-right: 17px;
+    padding-left: 12px;
     padding-top: 20px;
 }
-
 
 
 .crossed-icons {
@@ -330,10 +375,8 @@ span {
     width: 120px !important;
     height: 60px;
     border-radius: 10px;
-}
-
-.crossed-icons:nth-child(2) {
-    border-radius: 8px;
+    border: 1px solid #DDDFDD !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
 
@@ -375,4 +418,5 @@ span {
     padding-left: 40px;
     top: 60px;
     z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
