@@ -1,6 +1,6 @@
 @font-face {
     font-family: Gilroy;
-    src: url(..//..//fonts/Gilroy-Regular.ttf);
+    src: url(../../fonts/Gilroy-Regular.ttf);
 }
 
 * {
@@ -225,7 +225,7 @@ img {
     height: 60px;
     border-radius: 10px;
     border: 1px solid #DDDFDD !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    box-shadow: 0 4px 8px 0 rgba(206, 195, 195, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
 #img2Id {
@@ -240,12 +240,12 @@ img {
 
     .small-image:nth-child(2) {
         top: 368px;
-        right: 220px;
+        right: 240px;
     }
 
     .small-image:nth-child(4) {
         top: 448px;
-        right: 220px;
+        right: 240px;
     }
 
 }
